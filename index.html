@@ -1,18 +1,44 @@
 <!DOCTYPE html>
 <html>
 	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>RADIUM FLUOR PROJECT</title>
-		 <link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 	</head>
 	
 	<body>
+	
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="#">Instagram</a>
+    <a href="#">SoundCloud</a>
+    <a href="#">Youtube</a>
+    <a href="#">Spotify</a>
+  </div>
+</div>
+		
 		<div class="mainHeader">
 			RADIUM FLUOR PROJECT
 		</div>
-		<div class="container">
-			<div class="square">
-				<iframe class="responsive-iframe" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1150497811%3Fsecret_token%3Ds-RoAjz0AYEHe&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/radiumfluor" title="RadiumFluor" target="_blank" style="color: #cccccc; text-decoration: none;">RadiumFluor</a> · <a href="https://soundcloud.com/radiumfluor/vida-louca-mc-poze-do-rodo-radiumfluor-remix/s-RoAjz0AYEHe" title="Vida Louca - MC Poze do Rodo (RadiumFluor Remix)" target="_blank" style="color: #cccccc; text-decoration: none;">Vida Louca - MC Poze do Rodo (RadiumFluor Remix)</a></div>
-			</div>
-		</div>
+		<hr />
+		<ul>
+			<li><a href="#about">About</a></li>
+			<li><a href="#music">Music</a></li>
+			<li><a href="#media" onclick="openNav()">Media</a></li>
+		</ul>
+		
+<script>
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+</script>
 	</body>
 </html>
