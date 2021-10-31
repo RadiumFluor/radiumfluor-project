@@ -11,17 +11,15 @@ body {
 }
 
 body, html {
-  height: 100%;
-  margin: 0;
   font-family: 'Bebas Neue', cursive;
 }
 
 ul { 
- margin: 5px auto 0; 
+  margin: 5px auto 0; 
   padding: 0; 
   list-style: none; 
   display: table;
-  width: 100%;
+  width: 1vw;
   text-align: center;
 }
 li { 
