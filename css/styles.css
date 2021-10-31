@@ -21,7 +21,7 @@ ul {
   padding: 0; 
   list-style: none; 
   display: table;
-  width: 1vw;
+  width: 100%;
   text-align: center;
 }
 li { 
