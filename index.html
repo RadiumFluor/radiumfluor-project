@@ -1,44 +1,68 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>RADIUM FLUOR PROJECT</title>
 		<link rel="stylesheet" href="css/styles.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</head>
 	
 	<body>
-	
-<div id="myNav" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <div class="overlay-content">
-    <a href="https://www.instagram.com/radium_fluor/" target="_blank">Instagram</a>
-    <a href="https://soundcloud.com/radiumfluor" target="_blank">SoundCloud</a>
-    <a href="https://open.spotify.com/artist/7vh5tb8SZXYI6tED8UYyta" target="_blank">Spotify</a>
-    <a href="https://www.youtube.com/channel/UCpGMAZcgzjC6F8pXDk70TMQ" target="_blank">Youtube</a>
-  </div>
-</div>
-		
-		<div class="mainHeader">
-			RADIUM FLUOR PROJECT
+		<div class="headerTitle">
+			<span>RADIUM FLUOR</span>
 		</div>
-		<hr />
-		<ul>
-			<li><a href="#about">About</a></li>
-			<li><a href="#music">Music</a></li>
-			<li><a href="#media" onclick="openNav()">Media</a></li>
-		</ul>
 		
-<script>
-function openNav() {
-  document.getElementById("myNav").style.height = "100%";
-}
-
-function closeNav() {
-  document.getElementById("myNav").style.height = "0%";
-}
-</script>
+		<div class="topnav" id="topNav">
+			<a href="#about" id="about" onclick="setActive(this, 'AboutTab')">About</a>
+			<a href="#music" id="music" onclick="setActive(this, 'MusicTab')">Music</a>
+			<a href="#media" id="media" onclick="setActive(this, 'MediaTab')">Media</a>
+		</div>
+		<div id="nav" class="navigation">
+			<div id="AboutTab" class="tabcontent">
+				<p>Hello, i'm RadiumFluor!<br>A 19 years old "producer" trying to find myself in music.
+				<br><br>For now, I don't have much to tell about me, but you can check out the other tabs for more content. ;)
+				</p>
+				<img src="src/img/about-photo.jpg" alt="about-photo" style="width:70vw;height:70vw;display:block;margin-left:auto;margin-right:auto">
+			</div>
+		
+			<div id="MusicTab" class="tabcontent">
+				<p>Under construction...</p>
+			</div>
+		
+			<div id="MediaTab" class="tabcontent">
+				<p style="text-align:center">Under construction...</p>
+				<div class="social-media">
+				</div>
+			</div>
+		
+		</div>
+		
+		<script>
+			function setActive(e, pageName) {
+				var elems = document.querySelectorAll(".active");
+				[].forEach.call(elems, function(el) {
+					el.classList.remove("active")
+					
+				});
+				
+				var i, tabcontent, tablinks;
+				tabcontent = document.getElementsByClassName("tabcontent");
+				for (i = 0; i < tabcontent.length; i++) {
+					OutFade(tabcontent[i]);
+				}
+				e.className = "active";
+				document.getElementById("nav").style.width = "100%";
+				$('.tabcontent').promise().done(function() {
+					$('#'+pageName).fadeIn(400).delay(200);
+				})
+			}
+			function OutFade(elmnt) {
+				$(elmnt).fadeOut(400)
+			}
+		</script>
 	</body>
 </html>
